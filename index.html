@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="APHrGYh7zFi_RoO57ljDJ2Mo_eSAkYYtkX3-OASvRYE" />
+    <title>For FLIGHT</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css2?family=Roboto&display=swap' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <script src="main.js" defer></script>
+
+<body>
+    <button id="toggle-dark-mode">Dim</button>
+    <button type="reset" class="new">NEW</button>
+    <fieldset>
+        <legend>FLT Info</legend>
+        <div class="info">
+            <label for="takeoff-time">Takeoff</label>
+            <input type="tel" id="takeoff-time" name="takeoff-time" placeholder="0000">z
+            <br>
+            <label for="flight-time">FLT time</label>
+            <input type="tel" id="flight-time" name="flight-time" placeholder="1200">
+            <br>
+            <button class="split-time" onclick="threeCrew()">3crew</button>
+            <button class="split-time" onclick="fourCrew()">4crew</button>
+        </div>
+    </fieldset>
+    <div class="threeResult" id="threeResult"></div>
+    <fieldset id="three" style="display: none;">
+        <div class="three">
+            <table class="selectBox">
+                <thead>
+                    <tr class="boxRange">
+                        <th></th>
+                        <th id="box1"></th>
+                        <th id="box2"></th>
+                        <th id="box3"></th>
+                        <th id="box4"></th>
+                        <th id="box5"></th>
+                        <th id="box6"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>c</th>
+                        <td class="selected">TO</td>
+                        <td class="selected"></td>
+                        <td class="selected"></td>
+                        <td></td>
+                        <td></td>
+                        <td class="selected">LD</td>
+                    </tr>
+                    <tr>
+                        <th>c2</th>
+                        <td></td>
+                        <td colspan="4" class="selected">crz</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>f</th>
+                        <td class="selected">TO</td>
+                        <td></td>
+                        <td></td>
+                        <td class="selected"></td>
+                        <td class="selected"></td>
+                        <td class="selected">LD</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </fieldset>
+    <div class="fourResult" id="fourResult"></div>
+    <fieldset id="leg" style="display:none">
+        <div class="leg">
+            <label for="option-3">3 legs</label>
+            <input type="radio" id="option-3" name="legs" onclick="toggle(3)">
+            <label for="option-4">5 legs</label>
+            <input type="radio" id="option-4" name="legs" onclick="toggle(5)">
+        </div>
+    </fieldset>
+    <div id="timeForm" style="display:none">
+        <div id="timeInputs"></div>
+    </div>
+    <fieldset id="pa">
+        <legend>PA</legend>
+        <div>
+            <label for="utcTime">ETA</label>
+            <input type="tel" id="utcTime" placeholder="0000">z
+            <input type="number" id="offset" placeholder="±utc">
+            <input type="tel" id="celsius" placeholder="°C">
+            <br>
+            <button class="convert" id="convertBtn">Convert</button>
+        </div>
+    </fieldset>
+    <div class="result"">
+        <div id="localTimeResult"></div>
+    <div id="fahrenheitResult"></div>
+    </div>
+    <fieldset>
+        <legend>FLT Log</legend>
+        <div class="cal">
+            <table class="log">
+                <tr>
+                    <th></th>
+                    <td><input id="start-time-1" type="tel" placeholder="ramp out"></td>
+                    <td><input id="end-time-1" type="tel" placeholder="ramp in"></td>
+                    <td id="time-difference-1" style="display:none"></td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <td><input id="start-time-2" type="tel" placeholder="takeoff"></td>
+                    <td><input id="end-time-2" type="tel" placeholder="landing"></td>
+                    <td id="time-difference-2" style="display:none"></td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <td><input class="fuel" id="start-fuel" type="tel" placeholder="ramp"></td>
+                    <td><input class="fuel" id="end-fuel" type="tel" placeholder="rsv"></td>
+                    <td id="fuel-difference" style="display:none"></td>
+                </tr>
+            </table>
+            <button class="calculate"
+                onclick="calculateTimeDifference(1); calculateTimeDifference(2);calculateFuelDifference()">Calculate</button>
+        </div>
+    </fieldset>
+</body>
+
+</html>

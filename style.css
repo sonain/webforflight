@@ -1,0 +1,157 @@
+body{
+    font-size: large;
+    font-family: 'Roboto', sans-serif;
+}
+/* 기본 색상 정의 */
+:root {
+--primary-color: #fafafa;
+--secondary-color: #121212;
+}
+/* dark mode 상태 */
+body.dark,
+body.dark .shiftKst {
+background-color: var(--secondary-color);
+color: var(--primary-color);
+}
+legend{
+    font-weight:bold;
+    font-size: medium;
+    color: #616161;
+}
+#toggle-dark-mode {
+    position: absolute;
+    background-color: #121212;
+    color: #faf9f9;
+    padding: 5px 10px ;
+    top: 13px;
+    right: 11px;
+}
+/*  버튼  */
+button {
+    background-color: #121212;
+    border-radius: 30px;
+    padding: 0 10px ;
+    color: rgb(3, 3, 3);
+    font-size: 15px;
+    display: inline-block;
+    border: 2px solid rgb(219, 219, 219);
+    background-color: white;
+}
+button:hover{
+    border-color: #121212;
+}
+.new {
+    background-color: #faf9f9;
+    border-radius: 10px;
+    width :100% ;
+    padding:10px 3px;
+    color: #121212;
+    font-size: 15px;
+}
+button.step {
+    width: 30px;
+    height: 30px;
+    border-radius: 25px;
+    border: 2px rgb(219, 219, 219);
+    background-color: #121212;
+    color: #faf9f9;
+    font-size: large;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+.split-time, .calculate, .convert {
+    padding: 2px 20px;
+    background-color: #121212;
+    color:#faf9f9;
+}
+/*  인풋  */
+input{
+    font-size:large;
+    text-align:center;
+    border: 1.5px solid rgb(219, 219, 219);;
+    border-radius: 10px;
+}
+fieldset input[type="tel"]{
+    width: 4ch;
+}
+input[type="number"]{
+    width: 5ch;
+}
+
+table input[type="tel"]{
+    width: 7ch;
+
+}
+.log td{
+    border: rgb(219, 219, 219);
+    border-radius: 10px;
+    height: auto;
+}
+fieldset {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.2px solid rgb(219, 219, 219);
+    border-radius: 10px;
+    padding-bottom: 5px;
+}
+/* 3crew table */
+.three{
+
+}
+th {
+    font-size: small;
+}
+.selectBox {
+    width: 100%;
+}
+.selectBox td {
+    height: 10px;
+    border: 0.5px solid rgb(219, 219, 219);
+    border-radius: 5px;
+    background-color: transparent;
+    font-size: small;
+}
+
+.selectBox td.selected {
+    background-color: rgb(219, 219, 219);
+}
+.boxRange {
+    text-align: end;
+}
+/* ---- */
+div {
+    text-align: center;
+}
+
+.result {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#eta{
+    display: flex;
+    align-items: center;
+}
+#timeForm{
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+.line{
+    display: flex; /* flexbox를 사용하겠다는 선언 */
+    align-items: center; /* 세로 중앙 정렬 */
+    justify-content: space-evenly;
+}
+.shift{
+    display: flex; /* flexbox를 사용하겠다는 선언 */
+    justify-content: center;
+}
+/* .shiftKst{
+    padding-left: 1.5ch;
+    color: rgb(84, 83, 83);
+    display: flex;
+    font-size: small;
+    align-items: flex-end;
+} */
